@@ -1,4 +1,3 @@
-
 export interface Particle {
   id: number;
   x: number;

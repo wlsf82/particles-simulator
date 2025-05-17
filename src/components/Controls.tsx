@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { SimulationSettings } from '../types';
 
@@ -21,7 +20,7 @@ const Controls: React.FC<ControlsProps> = ({ settings, onSettingsChange, onReset
   return (
     <div className="fixed top-0 right-0 p-4 z-10">
       <div className="flex justify-end mb-2">
-        <button 
+        <button
           onClick={() => setIsOpen(!isOpen)}
           className="button text-sm"
           data-testid="toggle-controls"
@@ -29,14 +28,14 @@ const Controls: React.FC<ControlsProps> = ({ settings, onSettingsChange, onReset
           {isOpen ? 'Hide Controls' : 'Show Controls'}
         </button>
       </div>
-      
+
       {isOpen && (
-        <div 
-          className="control-panel w-64 max-h-[80vh] overflow-y-auto" 
+        <div
+          className="control-panel w-64 max-h-[80vh] overflow-y-auto"
           data-testid="control-panel"
         >
           <h2 className="text-lg font-bold mb-4">Particle Settings</h2>
-          
+
           <div className="slider-container">
             <label htmlFor="particleCount">Particle Count: {settings.particleCount}</label>
             <input
@@ -50,7 +49,7 @@ const Controls: React.FC<ControlsProps> = ({ settings, onSettingsChange, onReset
               data-testid="particle-count-slider"
             />
           </div>
-          
+
           <div className="slider-container">
             <label htmlFor="particleSize">Particle Size: {settings.particleSize}</label>
             <input
@@ -64,7 +63,7 @@ const Controls: React.FC<ControlsProps> = ({ settings, onSettingsChange, onReset
               data-testid="particle-size-slider"
             />
           </div>
-          
+
           <div className="slider-container">
             <label htmlFor="maxSpeed">Max Speed: {settings.maxSpeed}</label>
             <input
@@ -78,9 +77,9 @@ const Controls: React.FC<ControlsProps> = ({ settings, onSettingsChange, onReset
               data-testid="max-speed-slider"
             />
           </div>
-          
+
           <h2 className="text-lg font-bold mt-6 mb-4">Physics Settings</h2>
-          
+
           <div className="slider-container">
             <label htmlFor="gravity">Gravity: {settings.gravity.toFixed(2)}</label>
             <input
@@ -94,7 +93,7 @@ const Controls: React.FC<ControlsProps> = ({ settings, onSettingsChange, onReset
               data-testid="gravity-slider"
             />
           </div>
-          
+
           <div className="slider-container">
             <label htmlFor="friction">Friction: {settings.friction.toFixed(2)}</label>
             <input
@@ -108,7 +107,7 @@ const Controls: React.FC<ControlsProps> = ({ settings, onSettingsChange, onReset
               data-testid="friction-slider"
             />
           </div>
-          
+
           <div className="slider-container">
             <label htmlFor="elasticity">Elasticity: {settings.elasticity.toFixed(2)}</label>
             <input
@@ -122,9 +121,9 @@ const Controls: React.FC<ControlsProps> = ({ settings, onSettingsChange, onReset
               data-testid="elasticity-slider"
             />
           </div>
-          
+
           <h2 className="text-lg font-bold mt-6 mb-4">Visual Settings</h2>
-          
+
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1 text-gray-300">Color Mode</label>
             <select
@@ -138,7 +137,7 @@ const Controls: React.FC<ControlsProps> = ({ settings, onSettingsChange, onReset
               <option value="random">Random Colors</option>
             </select>
           </div>
-          
+
           {settings.colorMode === 'solid' && (
             <div className="mb-4">
               <label className="block text-sm font-medium mb-1 text-gray-300">Base Color</label>
@@ -151,7 +150,7 @@ const Controls: React.FC<ControlsProps> = ({ settings, onSettingsChange, onReset
               />
             </div>
           )}
-          
+
           <div className="mb-4 flex items-center">
             <input
               type="checkbox"
@@ -163,9 +162,9 @@ const Controls: React.FC<ControlsProps> = ({ settings, onSettingsChange, onReset
             />
             <label htmlFor="showTrails" className="text-sm font-medium text-gray-300">Show Trails</label>
           </div>
-          
-          <button 
-            onClick={onReset} 
+
+          <button
+            onClick={onReset}
             className="button w-full mt-4"
             data-testid="reset-button"
           >

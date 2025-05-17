@@ -1,4 +1,3 @@
-
 import ParticleSimulator from './components/ParticleSimulator';
 
 function App() {
