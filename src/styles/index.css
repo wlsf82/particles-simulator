@@ -1,0 +1,40 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-900 text-white min-h-screen;
+}
+
+.simulator-container {
+  @apply w-full h-full overflow-hidden relative;
+}
+
+.control-panel {
+  @apply bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-lg p-4 shadow-lg;
+}
+
+.slider-container {
+  @apply mb-4;
+}
+
+.slider-container label {
+  @apply block text-sm font-medium mb-1 text-gray-300;
+}
+
+.slider-container input {
+  @apply w-full bg-gray-700 rounded-lg appearance-none h-2;
+}
+
+.slider-container input::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 rounded-full bg-primary-500 cursor-pointer;
+}
+
+.button {
+  @apply px-4 py-2 rounded-md bg-primary-600 hover:bg-primary-700 transition-colors text-white font-medium focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50;
+}
+
+canvas {
+  @apply touch-none;
+}
