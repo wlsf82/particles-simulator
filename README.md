@@ -1,3 +1,4 @@
+[![Playwright Tests](https://github.com/wlsf82/particles-simulator/actions/workflows/playwright.yml/badge.svg)](https://github.com/wlsf82/particles-simulator/actions/workflows/playwright.yml)
 
 # Particle Simulator
 
